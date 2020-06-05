@@ -7,18 +7,18 @@
     xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms">
     <Application.Resources>
         <OnPlatform x:Key="FontAwesomeBrands" x:TypeArguments="x:String">
-            <On Platform="Android" Value="FontAwesomeBrands.otf#Regular" />
-            <On Platform="iOS" Value="FontAwesomeBrands-Regular" />
+            <On Platform="Android" Value="fabrands.ttf#Regular" />
+            <On Platform="iOS" Value="fabrands-Regular" />
         </OnPlatform>
 
         <OnPlatform x:Key="FontAwesomeSolid" x:TypeArguments="x:String">
-            <On Platform="Android" Value="FontAwesomeSolid.otf#Regular" />
-            <On Platform="iOS" Value="FontAwesomeSolid-Solid" />
+            <On Platform="Android" Value="fasolid.ttf#Regular" />
+            <On Platform="iOS" Value="fasolid-Solid" />
         </OnPlatform>
 
         <OnPlatform x:Key="FontAwesomeRegular" x:TypeArguments="x:String">
-            <On Platform="Android" Value="FontAwesomeRegular.otf#Regular" />
-            <On Platform="iOS" Value="FontAwesomeRegular-Regular" />
+            <On Platform="Android" Value="faregular.ttf#Regular" />
+            <On Platform="iOS" Value="faregular-Regular" />
         </OnPlatform>
     </Application.Resources>
 </prism:PrismApplication>

@@ -31,7 +31,7 @@
             <Grid Padding="5" HeightRequest="60">
                 <Grid.Resources>
                     <Style TargetType="Label">
-                        <Setter Property="FontFamily" Value="{StaticResource FontAwesomeRegular}" />
+                        <Setter Property="FontFamily" Value="{StaticResource FontAwesomeSolid}" />
                         <Setter Property="TextColor" Value="White" />
                         <Setter Property="FontSize" Value="20" />
                     </Style>
@@ -51,12 +51,12 @@
                     Orientation="Horizontal"
                     Spacing="15"
                     VerticalOptions="Center">
-                    <Label FontFamily="{StaticResource FontAwesomeSolid}" Text="{x:Static fontawe:FontAwesomeIcons.Synagogue}">
+                    <Label Text="{x:Static fontawe:FontAwesomeIcons.Synagogue}">
                         <Label.Behaviors>
                             <animation:ViewTappedAnimation AnimationType="Scale" />
                         </Label.Behaviors>
                     </Label>
-                    <Label FontFamily="{StaticResource FontAwesomeSolid}" Text="{x:Static fontawe:FontAwesomeIcons.EnvelopeOpenText}">
+                    <Label Text="{x:Static fontawe:FontAwesomeIcons.EnvelopeOpenText}">
                         <Label.Behaviors>
                             <animation:ViewTappedAnimation AnimationType="Scale" />
                         </Label.Behaviors>

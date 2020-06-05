@@ -50,9 +50,9 @@
     <string>LaunchScreen</string>
     <key>UIAppFonts</key>
     <array>
-      <string>FontAwesomeBrands.otf</string>
-      <string>FontAwesomeRegular.otf</string>
-      <string>FontAwesomeSolid.otf</string>
+      <string>fabrands.ttf</string>
+      <string>faregular.ttf</string>
+      <string>fasolid.ttf</string>
     </array>
   </dict>
 </plist>
