@@ -274,5 +274,14 @@
   <ItemGroup>
     <BundleResource Include="Resources\Default%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\btn1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ic_home.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\btn.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

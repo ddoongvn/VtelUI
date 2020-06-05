@@ -1,4 +1,6 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace VtelUI.Views
 {
@@ -7,7 +9,10 @@ namespace VtelUI.Views
         public MainPage()
         {
             InitializeComponent();
-            Switcher.SelectedIndex = 4;            
+            Switcher.SelectedIndex = 4;
+            var safeInsets = On<iOS>().SafeAreaInsets();
+            safeInsets.Top = 0;
+            
         }
 
 
