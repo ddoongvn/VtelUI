@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScrollView
+    x:Class="VtelUI.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animation="clr-namespace:VtelUI.Behaviors"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fontawe="clr-namespace:AwesomeIcon"
+    xmlns:prism="http://prismlibrary.com"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <Grid>
+        <Frame
+            Margin="0,-5,0,0"
+            Padding="0"
+            CornerRadius="5"
+            HasShadow="True"
+            HeightRequest="180"
+            VerticalOptions="StartAndExpand">
+            <Image Aspect="AspectFill" Source="bg_top.jpg" />
+        </Frame>
+        <Grid Padding="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Padding="5" HeightRequest="60">
+                <Grid.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="FontFamily" Value="{StaticResource FontAwesomeRegular}" />
+                        <Setter Property="TextColor" Value="White" />
+                        <Setter Property="FontSize" Value="20" />
+                    </Style>
+                </Grid.Resources>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                    <Label
+                        FontFamily="{StaticResource FontAwesomeSolid}"
+                        Text="{x:Static fontawe:FontAwesomeIcons.PhoneVolume}"
+                        VerticalOptions="Center">
+                        <Label.Behaviors>
+                            <animation:ViewTappedAnimation AnimationType="Scale" />
+                        </Label.Behaviors>
+                    </Label>
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="EndAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="15"
+                    VerticalOptions="Center">
+                    <Label FontFamily="{StaticResource FontAwesomeSolid}" Text="{x:Static fontawe:FontAwesomeIcons.Synagogue}">
+                        <Label.Behaviors>
+                            <animation:ViewTappedAnimation AnimationType="Scale" />
+                        </Label.Behaviors>
+                    </Label>
+                    <Label FontFamily="{StaticResource FontAwesomeSolid}" Text="{x:Static fontawe:FontAwesomeIcons.EnvelopeOpenText}">
+                        <Label.Behaviors>
+                            <animation:ViewTappedAnimation AnimationType="Scale" />
+                        </Label.Behaviors>
+                    </Label>
+                    <Label Text="{x:Static fontawe:FontAwesomeIcons.Bell}">
+                        <Label.Behaviors>
+                            <animation:ViewTappedAnimation AnimationType="Scale" />
+                        </Label.Behaviors>
+                    </Label>
+                </StackLayout>
+            </Grid>
+            <Frame
+                Grid.Row="1"
+                Padding="5"
+                BackgroundColor="White"
+                BorderColor="#C1BEBE"
+                CornerRadius="6"
+                HasShadow="True">
+                <StackLayout>
+                    <Label
+                        Margin="5,5,0,0"
+                        FontSize="15"
+                        Text="TÍNH NĂNG NỔI BẬT" />
+                    <BoxView
+                        Margin="-10,0,-20,0"
+                        BackgroundColor="Black"
+                        HeightRequest="1" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.Resources>
+                            <Style TargetType="Frame">
+                                <Setter Property="CornerRadius" Value="6" />
+                                <Setter Property="HorizontalOptions" Value="Center" />
+                                <Setter Property="HasShadow" Value="True" />
+                                <Setter Property="Padding" Value="10" />
+                                <Setter Property="WidthRequest" Value="30" />
+                                <Setter Property="HeightRequest" Value="30" />
+                            </Style>
+                            <Style TargetType="Label">
+                                <Setter Property="HorizontalOptions" Value="Center" />
+                            </Style>
+                            <Style TargetType="StackLayout">
+                                <Setter Property="Margin" Value="0,10" />
+                            </Style>
+                        </Grid.Resources>
+                        <StackLayout>
+                            <Frame BackgroundColor="#FAD0D0">
+                                <Label
+                                    FontFamily="{StaticResource FontAwesomeSolid}"
+                                    FontSize="28"
+                                    Text="{x:Static fontawe:FontAwesomeIcons.SearchLocation}"
+                                    TextColor="#EE7E7E" />
+                                <Frame.Behaviors>
+                                    <animation:ViewTappedAnimation AnimationType="FlipHorizontal" />
+                                </Frame.Behaviors>
+                            </Frame>
+                            <Label Text="Giám sát" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="1">
+                            <Frame BackgroundColor="#F5D0B3">
+                                <Label
+                                    FontFamily="{StaticResource FontAwesomeSolid}"
+                                    FontSize="28"
+                                    Text="{x:Static fontawe:FontAwesomeIcons.Dharmachakra}"
+                                    TextColor="#F8A33A" />
+                                <Frame.Behaviors>
+                                    <animation:ViewTappedAnimation AnimationType="FlipHorizontal" />
+                                </Frame.Behaviors>
+                            </Frame>
+                            <Label Text="Hải trình" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="2">
+                            <Frame BackgroundColor="#A9F0AF">
+                                <Label
+                                    FontFamily="{StaticResource FontAwesomeSolid}"
+                                    FontSize="26"
+                                    Text="{x:Static fontawe:FontAwesomeIcons.Ship}"
+                                    TextColor="#0FD00F" />
+                                <Frame.Behaviors>
+                                    <animation:ViewTappedAnimation AnimationType="FlipHorizontal" />
+                                </Frame.Behaviors>
+                            </Frame>
+                            <Label Text="Phương tiện" />
+                        </StackLayout>
+                        <StackLayout Grid.Column="3">
+                            <Frame BackgroundColor="#ACD2F2">
+                                <Label
+                                    FontFamily="{StaticResource FontAwesomeSolid}"
+                                    FontSize="28"
+                                    Text="{x:Static fontawe:FontAwesomeIcons.DollarSign}"
+                                    TextColor="#1897F0" />
+                                <Frame.Behaviors>
+                                    <animation:ViewTappedAnimation AnimationType="FlipHorizontal" />
+                                </Frame.Behaviors>
+                            </Frame>
+                            <Label Text="Phí" />
+                        </StackLayout>
+
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            <Label
+                Grid.Row="2"
+                Margin="15,5,0,0"
+                FontSize="15"
+                Text="BÁO CÁO" />
+            <BoxView
+                Grid.Row="3"
+                Margin="5,0"
+                BackgroundColor="Black"
+                HeightRequest="1" />
+            <Grid Grid.Row="4">
+                <Grid.Resources>
+                    <Style TargetType="Label">
+                        <Setter Property="HorizontalOptions" Value="Center" />
+                    </Style>
+                    <Style TargetType="ff:CachedImage">
+                        <Setter Property="HeightRequest" Value="70" />
+
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackLayout>
+                    <ff:CachedImage Source="btn.gif" />
+                    <Label Text="Phí" />
+                    <StackLayout.Behaviors>
+                        <animation:ViewTappedAnimation AnimationType="Fade" />
+                    </StackLayout.Behaviors>
+                </StackLayout>
+                <StackLayout Grid.Column="1">
+                    <ff:CachedImage Source="btn.gif" />
+                    <Label Text="Phí" />
+                    <StackLayout.Behaviors>
+                        <animation:ViewTappedAnimation AnimationType="FlipVertical" />
+                    </StackLayout.Behaviors>
+                </StackLayout>
+                <StackLayout Grid.Column="2">
+                    <ff:CachedImage Source="btn.gif" />
+                    <Label Text="Phí" />
+                    <StackLayout.Behaviors>
+                        <animation:ViewTappedAnimation AnimationType="FlipHorizontal" />
+                    </StackLayout.Behaviors>
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <ff:CachedImage Source="btn.gif" />
+                    <Label Text="Phí" />
+                    <StackLayout.Behaviors>
+                        <animation:ViewTappedAnimation AnimationType="Scale" />
+                    </StackLayout.Behaviors>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1">
+                    <ff:CachedImage Source="btn.gif" />
+                    <Label Text="Phí" />
+                    <StackLayout.Behaviors>
+                        <animation:ViewTappedAnimation AnimationType="Shake" />
+                    </StackLayout.Behaviors>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="2">
+                    <ff:CachedImage Source="btn.gif" />
+                    <Label Text="Phí" />
+                    <StackLayout.Behaviors>
+                        <animation:ViewTappedAnimation AnimationType="Rotate" />
+                    </StackLayout.Behaviors>
+                </StackLayout>
+            </Grid>
+            <Image
+                Grid.Row="5"
+                HeightRequest="300"
+                Source="bg_bot.jpg" />
+
+
+        </Grid>
+    </Grid>
+</ScrollView>

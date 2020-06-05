@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="VtelUI.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animation="clr-namespace:VtelUI.Behaviors"
+    xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:local="clr-namespace:VtelUI.Views"
+    xmlns:tabs="clr-namespace:Sharpnado.Presentation.Forms.CustomViews.Tabs;assembly=Sharpnado.Presentation.Forms"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <Style x:Key="BottomTabStyle" TargetType="tabs:BottomTabItem">
+            <Setter Property="SelectedTabColor" Value="#FFF2A016" />
+            <Setter Property="LabelSize" Value="15" />
+            <Setter Property="IconSize" Value="35" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <tabs:ViewSwitcher
+                x:Name="Switcher"
+                Grid.Row="0"
+                Margin="0,0,0,-10"
+                Animate="True"
+                VerticalOptions="Fill">
+                <local:Monitoring />
+                <local:Voyage />
+                <local:Vehicles />
+                <local:Account />
+                <local:HomePage />
+            </tabs:ViewSwitcher>
+            <Grid
+                x:Name="gridBot"
+                Grid.Row="1"
+                BackgroundColor="Transparent">
+                <tabs:TabHostView
+                    x:Name="TabHost"
+                    Padding="0,5,0,0"
+                    HeightRequest="60"
+                    SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
+                    ShadowType="Top"
+                    TabType="Fixed">
+                    <tabs:TabHostView.Tabs>
+                        <tabs:BottomTabItem
+                            IconImageSource="ic_search_location.png"
+                            Label="Giám sát"
+                            Style="{StaticResource BottomTabStyle}" />
+                        <tabs:BottomTabItem
+                            IconImageSource="ic_wheel.png"
+                            Label="Dữ liệu"
+                            Style="{StaticResource BottomTabStyle}" />
+                        <!--  Circle button  -->
+                        <tabs:TabButton TranslationY="-25">
+                            <tabs:TabButton.Content>
+                                <AbsoluteLayout>
+                                    <!--<Grid.RowDefinitions>
+                                        <RowDefinition Height="60" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>-->
+                                    <Frame
+                                        Padding="3"
+                                        AbsoluteLayout.LayoutBounds=".5,0,60,60"
+                                        AbsoluteLayout.LayoutFlags="YProportional,XProportional"
+                                        BackgroundColor="#FFF2A016"
+                                        CornerRadius="35">
+                                        <ff:CachedImage LoadingPriority="High" Source="ic_home.gif" />
+                                        <Frame.Behaviors>
+                                            <animation:ViewTappedAnimation AnimationType="Rotate" />
+                                        </Frame.Behaviors>
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TabButton_Clicked" />
+                                        </Frame.GestureRecognizers>
+                                    </Frame>
+                                    <Label
+                                        Grid.Row="1"
+                                        AbsoluteLayout.LayoutBounds=".5,60,75,22"
+                                        FontSize="12"
+                                        HorizontalOptions="Center"
+                                        Text="Trang chủ" />
+
+                                </AbsoluteLayout>
+                            </tabs:TabButton.Content>
+                        </tabs:TabButton>
+                        <tabs:BottomTabItem
+                            IconImageSource="ic_ship.png"
+                            Label="Cửa hàng"
+                            Style="{StaticResource BottomTabStyle}" />
+                        <tabs:BottomTabItem
+                            IconImageSource="ic_account.png"
+                            Label="Giải trí"
+                            Style="{StaticResource BottomTabStyle}" />
+                    </tabs:TabHostView.Tabs>
+                </tabs:TabHostView>
+            </Grid>
+        </Grid>
+
+    </ContentPage.Content>
+
+
+</ContentPage>
