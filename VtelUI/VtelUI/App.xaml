@@ -6,19 +6,36 @@
     xmlns:prism="http://prismlibrary.com"
     xmlns:tabView="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms">
     <Application.Resources>
-        <OnPlatform x:Key="FontAwesomeBrands" x:TypeArguments="x:String">
-            <On Platform="Android" Value="fabrands.ttf#Regular" />
-            <On Platform="iOS" Value="fabrands-Regular" />
-        </OnPlatform>
-
         <OnPlatform x:Key="FontAwesomeSolid" x:TypeArguments="x:String">
             <On Platform="Android" Value="fasolid.ttf#Regular" />
             <On Platform="iOS" Value="fasolid-Solid" />
         </OnPlatform>
 
-        <OnPlatform x:Key="FontAwesomeRegular" x:TypeArguments="x:String">
-            <On Platform="Android" Value="faregular.ttf#Regular" />
-            <On Platform="iOS" Value="faregular-Regular" />
-        </OnPlatform>
+        <OnAppTheme
+            x:Key="TopIconForegroundColor"
+            x:TypeArguments="Color"
+            Dark="Yellow"
+            Light="White" />
+        <OnAppTheme
+            x:Key="HobbiesPanelBackgroundColor"
+            x:TypeArguments="Color"
+            Dark="Black"
+            Light="White" />
+        <OnAppTheme
+            x:Key="ChildLayoutTitleColor"
+            x:TypeArguments="Color"
+            Dark="Yellow"
+            Light="Blue" />
+        <OnAppTheme
+            x:Key="FrameLayoutRadius"
+            x:TypeArguments="x:Int16"
+            Dark="25"
+            Light="25" />
+        <OnAppTheme
+            x:Key="IconTitleTextColor"
+            x:TypeArguments="Color"
+            Dark="Black"
+            Light="White" />
+
     </Application.Resources>
 </prism:PrismApplication>

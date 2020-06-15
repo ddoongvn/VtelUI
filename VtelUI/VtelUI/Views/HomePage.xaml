@@ -9,16 +9,15 @@
     xmlns:prism="http://prismlibrary.com"
     prism:ViewModelLocator.AutowireViewModel="True">
     <Grid>
-        <Frame
-            Margin="0,-5,0,0"
-            Padding="0"
-            CornerRadius="5"
-            HasShadow="True"
-            HeightRequest="180"
-            VerticalOptions="StartAndExpand">
-            <Image Aspect="AspectFill" Source="bg_top.jpg" />
-        </Frame>
-        <Grid Padding="5">
+        <Grid Padding="0" BackgroundColor="#F3F3F3">
+            <ff:CachedImage
+                Aspect="AspectFill"
+                HeightRequest="200"
+                LoadingPriority="High"
+                Source="b2222.jpg"
+                VerticalOptions="StartAndExpand" />
+        </Grid>
+        <Grid Padding="5,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -28,159 +27,183 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Grid Padding="5" HeightRequest="60">
-                <Grid.Resources>
-                    <Style TargetType="Label">
-                        <Setter Property="FontFamily" Value="{StaticResource FontAwesomeSolid}" />
-                        <Setter Property="TextColor" Value="White" />
-                        <Setter Property="FontSize" Value="20" />
-                    </Style>
-                </Grid.Resources>
-                <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                    <Label
-                        FontFamily="{StaticResource FontAwesomeSolid}"
-                        Text="{x:Static fontawe:FontAwesomeIcons.PhoneVolume}"
-                        VerticalOptions="Center">
-                        <Label.Behaviors>
+            <Grid Padding="15,0" HeightRequest="100">
+                <StackLayout
+                    HeightRequest="25"
+                    Orientation="Horizontal"
+                    VerticalOptions="End">
+                    <ff:CachedImage LoadingPriority="High" Source="hotline_Icon.png">
+                        <ff:CachedImage.Behaviors>
                             <animation:ViewTappedAnimation AnimationType="Scale" />
-                        </Label.Behaviors>
-                    </Label>
+                        </ff:CachedImage.Behaviors>
+                    </ff:CachedImage>
                 </StackLayout>
                 <StackLayout
+                    HeightRequest="25"
                     HorizontalOptions="EndAndExpand"
                     Orientation="Horizontal"
                     Spacing="15"
-                    VerticalOptions="Center">
-                    <Label Text="{x:Static fontawe:FontAwesomeIcons.Synagogue}">
-                        <Label.Behaviors>
+                    VerticalOptions="End">
+                    <ff:CachedImage LoadingPriority="High" Source="company_Icon.png">
+                        <ff:CachedImage.Behaviors>
                             <animation:ViewTappedAnimation AnimationType="Scale" />
-                        </Label.Behaviors>
-                    </Label>
-                    <Label Text="{x:Static fontawe:FontAwesomeIcons.EnvelopeOpenText}">
-                        <Label.Behaviors>
+                        </ff:CachedImage.Behaviors>
+                    </ff:CachedImage>
+                    <ff:CachedImage LoadingPriority="High" Source="messenger_Icon.png">
+                        <ff:CachedImage.Behaviors>
                             <animation:ViewTappedAnimation AnimationType="Scale" />
-                        </Label.Behaviors>
-                    </Label>
-                    <Label Text="{x:Static fontawe:FontAwesomeIcons.Bell}">
-                        <Label.Behaviors>
+                        </ff:CachedImage.Behaviors>
+                    </ff:CachedImage>
+                    <ff:CachedImage LoadingPriority="High" Source="notification_Icon.png">
+                        <ff:CachedImage.Behaviors>
                             <animation:ViewTappedAnimation AnimationType="Scale" />
-                        </Label.Behaviors>
-                    </Label>
+                        </ff:CachedImage.Behaviors>
+                    </ff:CachedImage>
                 </StackLayout>
             </Grid>
             <Frame
                 Grid.Row="1"
-                Padding="5"
+                Margin="10,5"
+                Padding="0,10"
                 BackgroundColor="White"
-                BorderColor="#C1BEBE"
-                CornerRadius="6"
+                CornerRadius="10"
                 HasShadow="True">
-                <StackLayout>
-                    <Label
-                        Margin="5,5,0,0"
-                        FontSize="15"
-                        Text="TÍNH NĂNG NỔI BẬT" />
-                    <BoxView
-                        Margin="-10,0,-20,0"
-                        BackgroundColor="Black"
-                        HeightRequest="1" />
-                    <Grid>
+                <StackLayout Spacing="0">
+                    <Grid Margin="10">
+                        <Label
+                            FontSize="15"
+                            Text="NỔI BẬT"
+                            TextColor="#4A7AFF" />
+                        <ff:CachedImage
+                            HeightRequest="20"
+                            HorizontalOptions="End"
+                            LoadingPriority="High"
+                            Source="Hobbies_Icon.png"
+                            VerticalOptions="Center">
+                            <ff:CachedImage.Behaviors>
+                                <animation:ViewTappedAnimation AnimationType="Scale" />
+                            </ff:CachedImage.Behaviors>
+                        </ff:CachedImage>
+                    </Grid>
+
+                    <BoxView BackgroundColor="#4A7AFF" HeightRequest="1" />
+
+                    <Grid
+                        Margin="0,5"
+                        Padding="10"
+                        RowSpacing="10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
                             <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Grid.Resources>
-                            <Style TargetType="Frame">
-                                <Setter Property="CornerRadius" Value="6" />
-                                <Setter Property="HorizontalOptions" Value="Center" />
-                                <Setter Property="HasShadow" Value="True" />
-                                <Setter Property="Padding" Value="10" />
-                                <Setter Property="WidthRequest" Value="30" />
-                                <Setter Property="HeightRequest" Value="30" />
-                            </Style>
-                            <Style TargetType="Label">
-                                <Setter Property="HorizontalOptions" Value="Center" />
-                            </Style>
-                            <Style TargetType="StackLayout">
-                                <Setter Property="Margin" Value="0,10" />
-                            </Style>
-                        </Grid.Resources>
-                        <StackLayout>
-                            <Frame BackgroundColor="#FAD0D0">
-                                <Label
-                                    FontFamily="{StaticResource FontAwesomeSolid}"
-                                    FontSize="28"
-                                    Text="{x:Static fontawe:FontAwesomeIcons.SearchLocation}"
-                                    TextColor="#EE7E7E" />
-                                <Frame.Behaviors>
-                                    <animation:ViewTappedAnimation AnimationType="FlipHorizontal" />
-                                </Frame.Behaviors>
-                            </Frame>
-                            <Label Text="Giám sát" />
-                        </StackLayout>
-                        <StackLayout Grid.Column="1">
-                            <Frame BackgroundColor="#F5D0B3">
-                                <Label
-                                    FontFamily="{StaticResource FontAwesomeSolid}"
-                                    FontSize="28"
-                                    Text="{x:Static fontawe:FontAwesomeIcons.Dharmachakra}"
-                                    TextColor="#F8A33A" />
-                                <Frame.Behaviors>
-                                    <animation:ViewTappedAnimation AnimationType="FlipHorizontal" />
-                                </Frame.Behaviors>
-                            </Frame>
-                            <Label Text="Hải trình" />
-                        </StackLayout>
-                        <StackLayout Grid.Column="2">
-                            <Frame BackgroundColor="#A9F0AF">
-                                <Label
-                                    FontFamily="{StaticResource FontAwesomeSolid}"
-                                    FontSize="26"
-                                    Text="{x:Static fontawe:FontAwesomeIcons.Ship}"
-                                    TextColor="#0FD00F" />
-                                <Frame.Behaviors>
-                                    <animation:ViewTappedAnimation AnimationType="FlipHorizontal" />
-                                </Frame.Behaviors>
-                            </Frame>
-                            <Label Text="Phương tiện" />
-                        </StackLayout>
-                        <StackLayout Grid.Column="3">
-                            <Frame BackgroundColor="#ACD2F2">
-                                <Label
-                                    FontFamily="{StaticResource FontAwesomeSolid}"
-                                    FontSize="28"
-                                    Text="{x:Static fontawe:FontAwesomeIcons.DollarSign}"
-                                    TextColor="#1897F0" />
-                                <Frame.Behaviors>
-                                    <animation:ViewTappedAnimation AnimationType="FlipHorizontal" />
-                                </Frame.Behaviors>
-                            </Frame>
-                            <Label Text="Phí" />
-                        </StackLayout>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
 
+                        <ff:CachedImage
+                            HeightRequest="15"
+                            LoadingPriority="High"
+                            Source="monitoringGreen_Icon.png"
+                            WidthRequest="15">
+                            <ff:CachedImage.Behaviors>
+                                <animation:ViewTappedAnimation AnimationType="Scale" />
+                            </ff:CachedImage.Behaviors>
+                        </ff:CachedImage>
+                        <Label
+                            Grid.Row="1"
+                            FontSize="13"
+                            HorizontalOptions="Center"
+                            Text="Giám sát" />
+                        <ff:CachedImage
+                            Grid.Column="1"
+                            HeightRequest="15"
+                            LoadingPriority="High"
+                            Source="voyage_Icon.png"
+                            WidthRequest="15">
+                            <ff:CachedImage.Behaviors>
+                                <animation:ViewTappedAnimation AnimationType="Scale" />
+                            </ff:CachedImage.Behaviors>
+                        </ff:CachedImage>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            FontSize="13"
+                            HorizontalOptions="Center"
+                            Text="Hải trình" />
+                        <ff:CachedImage
+                            Grid.Column="2"
+                            HeightRequest="15"
+                            LoadingPriority="High"
+                            Source="vehicles_Icon.png"
+                            WidthRequest="15">
+                            <ff:CachedImage.Behaviors>
+                                <animation:ViewTappedAnimation AnimationType="Scale" />
+                            </ff:CachedImage.Behaviors>
+                        </ff:CachedImage>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            FontSize="13"
+                            HorizontalOptions="Center"
+                            Text="Phương tiện" />
+                        <ff:CachedImage
+                            Grid.Column="3"
+                            HeightRequest="50"
+                            LoadingPriority="High"
+                            Source="servicesFee_Icon.png"
+                            WidthRequest="50">
+                            <ff:CachedImage.Behaviors>
+                                <animation:ViewTappedAnimation AnimationType="Scale" />
+                            </ff:CachedImage.Behaviors>
+                        </ff:CachedImage>
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="3"
+                            FontSize="13"
+                            HorizontalOptions="Center"
+                            Text="Phí dịch vụ" />
                     </Grid>
                 </StackLayout>
             </Frame>
-            <Label
-                Grid.Row="2"
-                Margin="15,5,0,0"
-                FontSize="15"
-                Text="BÁO CÁO" />
+            <Grid Grid.Row="2" Padding="20,5">
+                <Label
+                    FontSize="15"
+                    Text="TIỆN ÍCH"
+                    TextColor="#4A7AFF"
+                    VerticalOptions="Center" />
+                <ff:CachedImage
+                    HeightRequest="20"
+                    HorizontalOptions="End"
+                    Source="list_Icon.png">
+                    <ff:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+                    </ff:CachedImage.GestureRecognizers>
+                    <ff:CachedImage.Behaviors>
+                        <animation:ViewTappedAnimation AnimationType="Scale" />
+                    </ff:CachedImage.Behaviors>
+                </ff:CachedImage>
+            </Grid>
+
             <BoxView
                 Grid.Row="3"
                 Margin="5,0"
-                BackgroundColor="Black"
+                BackgroundColor="#4A7AFF"
                 HeightRequest="1" />
-            <Grid Grid.Row="4">
+            <Grid
+                Grid.Row="4"
+                Padding="15"
+                RowSpacing="20">
                 <Grid.Resources>
                     <Style TargetType="Label">
                         <Setter Property="HorizontalOptions" Value="Center" />
+                        <Setter Property="Margin" Value="0,5" />
                     </Style>
                     <Style TargetType="ff:CachedImage">
-                        <Setter Property="HeightRequest" Value="70" />
-
+                        <Setter Property="HeightRequest" Value="50" />
+                        <Setter Property="WidthRequest" Value="50" />
                     </Style>
                 </Grid.Resources>
                 <Grid.RowDefinitions>
@@ -193,52 +216,63 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <StackLayout>
-                    <ff:CachedImage Source="btn.gif" />
-                    <Label Text="Phí" />
+                    <ff:CachedImage Source="activitiesReport_Icon.png" />
+                    <Label HorizontalTextAlignment="Center" Text=" Tổng hợp &#x0a; hoạt động" />
                     <StackLayout.Behaviors>
                         <animation:ViewTappedAnimation AnimationType="Fade" />
                     </StackLayout.Behaviors>
                 </StackLayout>
                 <StackLayout Grid.Column="1">
-                    <ff:CachedImage Source="btn.gif" />
-                    <Label Text="Phí" />
+                    <ff:CachedImage Source="detailReport_Icon.png">
+                        <ff:CachedImage.Behaviors>
+                            <animation:ViewTappedAnimation AnimationType="Scale" />
+                        </ff:CachedImage.Behaviors>
+                    </ff:CachedImage>
+                    <Label Text="   Chi tiết &#x0a;hoạt động" />
                     <StackLayout.Behaviors>
                         <animation:ViewTappedAnimation AnimationType="FlipVertical" />
                     </StackLayout.Behaviors>
                 </StackLayout>
                 <StackLayout Grid.Column="2">
-                    <ff:CachedImage Source="btn.gif" />
-                    <Label Text="Phí" />
+                    <ff:CachedImage Source="gasConsumable_Icon.png" />
+                    <Label Text=" Tiêu hao &#x0a;nhiên liệu" />
                     <StackLayout.Behaviors>
                         <animation:ViewTappedAnimation AnimationType="FlipHorizontal" />
                     </StackLayout.Behaviors>
                 </StackLayout>
                 <StackLayout Grid.Row="1">
-                    <ff:CachedImage Source="btn.gif" />
-                    <Label Text="Phí" />
+                    <ff:CachedImage Source="gasInOut_Icon.png" />
+                    <Label Text="  Đổ hút &#x0a;nhiên liệu" />
                     <StackLayout.Behaviors>
                         <animation:ViewTappedAnimation AnimationType="Scale" />
                     </StackLayout.Behaviors>
                 </StackLayout>
                 <StackLayout Grid.Row="1" Grid.Column="1">
-                    <ff:CachedImage Source="btn.gif" />
-                    <Label Text="Phí" />
+                    <ff:CachedImage Source="gasChart_Icon.png" />
+                    <Label Text=" Biểu đồ &#x0a;nhiên liệu" />
                     <StackLayout.Behaviors>
                         <animation:ViewTappedAnimation AnimationType="Shake" />
                     </StackLayout.Behaviors>
                 </StackLayout>
                 <StackLayout Grid.Row="1" Grid.Column="2">
-                    <ff:CachedImage Source="btn.gif" />
-                    <Label Text="Phí" />
+                    <ff:CachedImage Source="stoppingVehicle.png" />
+                    <Label Text="   Dừng đỗ &#x0a;phương tiện" />
                     <StackLayout.Behaviors>
                         <animation:ViewTappedAnimation AnimationType="Rotate" />
                     </StackLayout.Behaviors>
                 </StackLayout>
             </Grid>
-            <Image
+            <Frame
                 Grid.Row="5"
-                HeightRequest="300"
-                Source="bg_bot.jpg" />
+                Margin="15,0"
+                Padding="0"
+                CornerRadius="15">
+                <ff:CachedImage
+                    Aspect="AspectFill"
+                    HeightRequest="200"
+                    Source="a1111.jpg" />
+            </Frame>
+
 
 
         </Grid>

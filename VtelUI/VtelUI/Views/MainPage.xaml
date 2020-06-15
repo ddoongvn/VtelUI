@@ -12,7 +12,7 @@
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Resources>
         <Style x:Key="BottomTabStyle" TargetType="tabs:BottomTabItem">
-            <Setter Property="SelectedTabColor" Value="#FFF2A016" />
+            <Setter Property="SelectedTabColor" Value="#1976D2" />
             <Setter Property="LabelSize" Value="15" />
             <Setter Property="IconSize" Value="35" />
         </Style>
@@ -43,34 +43,31 @@
                 <tabs:TabHostView
                     x:Name="TabHost"
                     Padding="0,5,0,0"
-                    HeightRequest="60"
+                    HeightRequest="80"
                     SelectedIndex="{Binding Source={x:Reference Switcher}, Path=SelectedIndex, Mode=TwoWay}"
                     ShadowType="Top"
                     TabType="Fixed">
                     <tabs:TabHostView.Tabs>
                         <tabs:BottomTabItem
-                            IconImageSource="ic_search_location.png"
-                            Label="Giám sát"
+                            IconImageSource="vehicle_MenuIcon.png"
+                            Label="Phương tiện"
                             Style="{StaticResource BottomTabStyle}" />
                         <tabs:BottomTabItem
-                            IconImageSource="ic_wheel.png"
-                            Label="Dữ liệu"
+                            IconImageSource="monitoring_MenuIcon.png"
+                            Label="Giám sát"
                             Style="{StaticResource BottomTabStyle}" />
+
                         <!--  Circle button  -->
-                        <tabs:TabButton TranslationY="-25">
+                        <tabs:TabButton TranslationY="-20">
                             <tabs:TabButton.Content>
                                 <AbsoluteLayout>
-                                    <!--<Grid.RowDefinitions>
-                                        <RowDefinition Height="60" />
-                                        <RowDefinition Height="Auto" />
-                                    </Grid.RowDefinitions>-->
                                     <Frame
-                                        Padding="3"
+                                        Padding="10,10,8,10"
                                         AbsoluteLayout.LayoutBounds=".5,0,60,60"
                                         AbsoluteLayout.LayoutFlags="YProportional,XProportional"
-                                        BackgroundColor="#FFF2A016"
+                                        BackgroundColor="#1976D2"
                                         CornerRadius="35">
-                                        <ff:CachedImage LoadingPriority="High" Source="ic_home.gif" />
+                                        <ff:CachedImage LoadingPriority="High" Source="home_MenuIcon.png" />
                                         <Frame.Behaviors>
                                             <animation:ViewTappedAnimation AnimationType="Rotate" />
                                         </Frame.Behaviors>
@@ -84,17 +81,16 @@
                                         FontSize="12"
                                         HorizontalOptions="Center"
                                         Text="Trang chủ" />
-
                                 </AbsoluteLayout>
                             </tabs:TabButton.Content>
                         </tabs:TabButton>
                         <tabs:BottomTabItem
-                            IconImageSource="ic_ship.png"
-                            Label="Cửa hàng"
+                            IconImageSource="voyage_MenuIcon.png"
+                            Label="Hải trình"
                             Style="{StaticResource BottomTabStyle}" />
                         <tabs:BottomTabItem
-                            IconImageSource="ic_account.png"
-                            Label="Giải trí"
+                            IconImageSource="account_MenuIcon.png"
+                            Label="Tài khoản"
                             Style="{StaticResource BottomTabStyle}" />
                     </tabs:TabHostView.Tabs>
                 </tabs:TabHostView>
